@@ -1,0 +1,77 @@
+{
+  "dataset_shape": [
+    12000,
+    31
+  ],
+  "class_distribution": {
+    "No": 9648,
+    "Yes": 2352
+  },
+  "results": {
+    "logistic_regression": {
+      "threshold": 0.48,
+      "accuracy": 0.6408333333333334,
+      "precision": 0.2975206611570248,
+      "recall": 0.6127659574468085,
+      "f1_score": 0.40055632823365783,
+      "roc_auc": 0.6655330173079043,
+      "confusion_matrix": {
+        "tn": 1250,
+        "fp": 680,
+        "fn": 182,
+        "tp": 288
+      }
+    },
+    "random_forest": {
+      "threshold": 0.31,
+      "accuracy": 0.6420833333333333,
+      "precision": 0.2976066597294485,
+      "recall": 0.6085106382978723,
+      "f1_score": 0.3997204751921733,
+      "roc_auc": 0.6645397420350567,
+      "confusion_matrix": {
+        "tn": 1255,
+        "fp": 675,
+        "fn": 184,
+        "tp": 286
+      }
+    }
+  },
+  "final_model": {
+    "selected_model": "logistic_regression",
+    "threshold": 0.48,
+    "model_reason": "The final model balances a strong baseline with interpretability. It performs competitively with the tree model while providing clear coefficient-based explanations and easier business communication."
+  },
+  "feature_columns": [
+    "Transaction_Type",
+    "Amount_NGN",
+    "Channel",
+    "Device_Type",
+    "Location",
+    "International_Transaction",
+    "Transaction_Status",
+    "customer_prior_tx_count",
+    "customer_prior_risk_count",
+    "customer_prior_risk_rate",
+    "customer_prior_failure_count",
+    "customer_prior_failure_rate",
+    "Hour",
+    "DayOfWeek",
+    "Month",
+    "Amount_Log",
+    "Is_International",
+    "Is_Failed",
+    "Is_Reversed",
+    "Is_Pending",
+    "Age",
+    "Gender",
+    "City",
+    "Customer_Segment",
+    "Account_Type",
+    "Tenure_Months",
+    "Digital_Engagement_Score",
+    "Monthly_Income_Band",
+    "Preferred_Channel",
+    "Account_Status"
+  ]
+}
